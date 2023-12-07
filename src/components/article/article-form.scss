@@ -1,0 +1,21 @@
+.article-form {
+  padding: 44px 40px;
+  background-color: $gray;
+  border-radius: 30px;
+  background-image: url("../assets/images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  @include r(1200) {
+    background: none;
+    padding: 0;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    color: $dark;
+  }
+}

@@ -151,6 +151,15 @@
     }
 }
 
+.mb {
+    &-0 {
+        margin-bottom: 0;
+    }
+    &-24 {
+        margin-bottom: 24px;
+    }
+}
+
 .mt {
     &-20 {
         margin-top: rem(20);

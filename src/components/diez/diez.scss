@@ -1,0 +1,17 @@
+.diez {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &__icon {
+    display: flex;
+    width: 61px;
+    height: 13px;
+  }
+
+  span {
+    color: #BCBCBC;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+}

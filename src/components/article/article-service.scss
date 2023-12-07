@@ -1,0 +1,115 @@
+.article-service {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px 20px;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  min-height: 100px;
+  background-color: $gray;
+  border-radius: 15px;
+
+  @include r(1200) {
+    padding: 24px;
+  }
+
+  &--form {
+    background-image: url("../assets/images/wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $dark;
+    color: $light;
+
+    .article-service__title,
+    .article-service__text {
+      color: $light;
+    }
+  }
+
+  &--dark {
+    height: 301px;
+    background-color: $dark;
+    background-image: url("../assets/images/planet-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--row {
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include r(1200) {
+      align-items: flex-end;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    color: $dark;
+  }
+
+  &__text {
+    line-height: 24px;
+    color: $primary;
+
+    &--blue {
+      color: $blue;
+    }
+  }
+
+  &__picture {
+    mix-blend-mode: multiply;
+
+    &--cover {
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      &--absolute{
+        @include r(1200) {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 200px;
+        }
+      }
+    }
+
+    &--absolute {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      @include r(1200) {
+        width: 100px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__element {
+    list-style: disc inside;
+    line-height: 24px;
+  }
+}

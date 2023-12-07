@@ -1,0 +1,12 @@
+.title {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  color: $dark;
+
+  @include r(1200) {
+    font-size: 32px;
+    line-height: 36.5px;
+  }
+}

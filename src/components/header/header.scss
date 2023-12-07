@@ -1,0 +1,25 @@
+.header {
+  padding: 17px 0;
+  border-bottom: 1px solid $border;
+
+  @include r(1200) {
+    padding: 6px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include r(1200) {
+      justify-content: center;
+    }
+
+    button {
+      @include r(1200) {
+        display: none;
+      }
+    }
+  }
+}

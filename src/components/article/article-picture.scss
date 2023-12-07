@@ -1,0 +1,13 @@
+.article-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+  background-color: $gray;
+  border-radius: 30px;
+
+  @include r(1200) {
+    padding: 30px;
+  }
+}

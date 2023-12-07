@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "inputmask": "^5.0.8",
     "modern-css-reset": "^1.4.0",
     "normalize.css": "^8.0.1",
     "nouislider": "^15.7.1",

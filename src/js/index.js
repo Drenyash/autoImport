@@ -1,5 +1,8 @@
 import "normalize.css/normalize.css";
 import "./sprite";
-import "./pages";
 import "../css/main.scss";
 
+import "./form";
+import "./modal";
+import "./show";
+import "./inputMask";

@@ -154,6 +154,11 @@
 }
 
 .pbm {
+    &-0 {
+        @include r(1200) {
+            padding-bottom: 0;
+        }
+    }
     &-1 {
         @include r(1229) {
             padding-bottom: rem(1);

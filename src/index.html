@@ -2,19 +2,862 @@
 <html lang="ru">
 
 <head>
-	<%= htmlWebpackPlugin.options.head %>
-	<title><%= htmlWebpackPlugin.options.title %></title>
+    <%= htmlWebpackPlugin.options.head %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 
 <body class="body">
 
-<%= htmlWebpackPlugin.options.sectionHeader %>
+<!--<%= htmlWebpackPlugin.options.sectionHeader %>-->
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <nav class="nav">
+                <a href="#features" class="nav__link">Преимущества</a>
+                <a href="#services" class="nav__link">Услуги</a>
+                <a href="#cargo" class="nav__link">Грузы</a>
+            </nav>
+            <a href="/" class="logo">
+                <img src="./assets/images/logo.svg" alt="">
+            </a>
+            <button class="button" data-modal-open>
+                <span>Заказать</span>
+                <svg class="button__icon">
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-pointer"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
 <main class="main">
-	<h1>Hello World</h1>
+    <section class="section pt-80 ptm-60 pb-40 pbm-10">
+        <div class="container">
+            <div class="head pb-25 pbm-0">
+                <h2 class="title mb-24">Любые грузы из<br class="mob-hidden"> Европы в Россию</h2>
+                <p class="subtitle mb-40 mbm-30">
+                    Взаимовыгодное сотрудничество в сфере внешнеторговых<br class="mob-hidden">поставок продукции
+                    ввозимой на российский
+                    рынок<br><br>
+                    Осуществляем платежи за товары в страны ЕС <span>со 100%<br class="mob-hidden"> гарантией сохранности денежных средств.</span>
+                </p>
+                <button class="button" data-modal-open>
+                    <span>Заказать</span>
+                    <svg class="button__icon">
+                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-pointer"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="grid">
+                <div class="grid__item grid__item--s-2">
+                    <picture class="article-picture">
+                        <source srcset="./assets/images/timeline-mobile.png" media="(max-width: 1200px)">
+                        <img src="./assets/images/timeline-desktop.png" alt="">
+                    </picture>
+                </div>
+                <div class="grid__item">
+                    <article class="article-product article-product--car">
+                        <picture class="article-product__picture">
+                            <img src="./assets/images/car-1.png" alt="">
+                        </picture>
+                        <div class="article-product__info">
+                            <div class="article-product__detail">
+                                <h3 class="article-product__title">Автодоставка</h3>
+                                <p class="article-product__text">Сборные фуры с любым грузом.</p>
+                            </div>
+                            <div class="article-product__wrapper">
+                                <div class="article-product__item">
+                                    <div class="article-product__head">
+                                        <svg class="article-product__icon">
+                                            <use xlink:href="./assets/sprite/sprite.svg#icon-calendar"></use>
+                                        </svg>
+                                        <p class="article-product__text article-product__text--small">Срок доставки</p>
+                                    </div>
+                                    <p class="article-product__text article-product__text--big">10 - 30 дней</p>
+                                </div>
+                                <div class="article-product__item">
+                                    <div class="article-product__head">
+                                        <svg class="article-product__icon">
+                                            <use xlink:href="./assets/sprite/sprite.svg#icon-weight"></use>
+                                        </svg>
+                                        <p class="article-product__text article-product__text--small">Вес груза</p>
+                                    </div>
+                                    <p class="article-product__text article-product__text--big">10 - 30 дней</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="grid__item">
+                    <article class="article-product">
+                        <picture class="article-product__picture">
+                            <img src="./assets/images/ship.png" alt="">
+                        </picture>
+                        <div class="article-product__info">
+                            <div class="article-product__detail">
+                                <h3 class="article-product__title">Морская доставка</h3>
+                                <p class="article-product__text">Решение для крупных грузов.</p>
+                            </div>
+                            <div class="article-product__wrapper">
+                                <div class="article-product__item">
+                                    <div class="article-product__head">
+                                        <svg class="article-product__icon">
+                                            <use xlink:href="./assets/sprite/sprite.svg#icon-calendar"></use>
+                                        </svg>
+                                        <p class="article-product__text article-product__text--small">Срок доставки</p>
+                                    </div>
+                                    <p class="article-product__text article-product__text--big">от 20 - 45 дней</p>
+                                </div>
+                                <div class="article-product__item">
+                                    <div class="article-product__head">
+                                        <svg class="article-product__icon">
+                                            <use xlink:href="./assets/sprite/sprite.svg#icon-weight"></use>
+                                        </svg>
+                                        <p class="article-product__text article-product__text--small">Вес груза</p>
+                                    </div>
+                                    <p class="article-product__text article-product__text--big">От 1 контейнера</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-80 pb-100 pbm-90" id="cargo">
+        <div class="container">
+            <div class="head pb-25 pbm-0">
+                <h2 class="title mb-24">Виды грузов,<br>которые мы возим</h2>
+                <p class="subtitle">
+                    В нашей практике были оформлены грузы из различных товарных групп - бытовая техника,<br>мебель,
+                    промышленное оборудование, авто и спецтехника, строительные материалы,<br>текстиль, химия и
+                    промышленные химические соединения, обувь, одежда, продукты питания.
+                </p>
+            </div>
+            <div class="grid grid--extended">
+                <div class="grid__item grid__item--s-2">
+                    <article class="article-service">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Двигатели и запчасти</h3>
+                            <p class="article-service__text">
+                                Двигатели и запчасти для автомобилей, авиации, судов.
+                            </p>
+                        </div>
+                        <picture class="article-service__picture">
+                            <img src="./assets/images/engine.png" alt="">
+                        </picture>
+                    </article>
+                </div>
+                <div class="grid__item grid__item--s-3">
+                    <article class="article-service article-service--row">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Двигатели и запчасти</h3>
+                            <ul class="article-service__list">
+                                <li class="article-service__element">Компьютеры, комплектующие</li>
+                                <li class="article-service__element">Принтеры, копиры, печатные машины</li>
+                                <li class="article-service__element">Смартфоны, сетевое оборудование, софт</li>
+                                <li class="article-service__element">Аудиотехника,<br class="desktop-hidden">видеотехника,
+                                    радио
+                                </li>
+                            </ul>
+                        </div>
+                        <picture class="article-service__picture article-service__picture--absolute">
+                            <img src="./assets/images/iphone.png" alt="">
+                        </picture>
+                    </article>
+                </div>
+                <div class="grid__item grid__item--s-2 grid__item--r-2">
+                    <article class="article-service">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Двигатели и запчасти</h3>
+                            <ul class="article-service__list">
+                                <li class="article-service__element">Кухни: холодильники, кондиционеры, вытяжки,
+                                    кухонные плиты, посудомойки, весы, микроволновки, электроплиты, фены
+                                </li>
+                                <li class="article-service__element">Стиральные, сушильные, швейные машины</li>
+                                <li class="article-service__element">Пылесосы, бытовая электротехника</li>
+                            </ul>
+                        </div>
+                        <picture class="article-service__picture article-service__picture--cover">
+                            <img src="./assets/images/kitchen.png" alt="">
+                        </picture>
+                    </article>
+                </div>
+                <div class="grid__item grid__item--s-2">
+                    <article class="article-service">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Автоэлектрика</h3>
+                            <p class="article-service__text">
+                                Зажигание, стартеры, свет, другое.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="grid__item grid__item--s-3">
+                    <article class="article-service article-service--row pbm-100">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Трансмиссия</h3>
+                            <ul class="article-service__list">
+                                <li class="article-service__element">Подшипники</li>
+                                <li class="article-service__element">Коленвалы</li>
+                                <li class="article-service__element">Коробки передач</li>
+                                <li class="article-service__element">Сцепления</li>
+                            </ul>
+                        </div>
+                        <picture
+                            class="article-service__picture article-service__picture--cover article-service__picture--cover--absolute">
+                            <img src="./assets/images/wehicle.png" alt="">
+                        </picture>
+                    </article>
+                </div>
+                <div class="grid__item grid__item--s-4">
+                    <article class="article-service article-service--row">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Строительное оборудование</h3>
+                            <ul class="article-service__list">
+                                <li class="article-service__element">Лифты</li>
+                                <li class="article-service__element">Грузовые лифты</li>
+                                <li class="article-service__element">Подъемники</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="grid__item grid__item--s-3">
+                    <article class="article-service article-service--form">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Виды грузов</h3>
+                            <p class="article-service__text">Оставте заявку и узнайте, как привести интересующий
+                                товар.</p>
+                        </div>
+                        <form action="#" class="form-feedback" data-form>
+                            <label class="form-feedback__input">
+                                <input type="tel" name="TEL" placeholder="Телефон" required>
+                                <svg class="form-feedback__icon">
+                                    <use xlink:href="./assets/sprite/sprite.svg#icon-phone"></use>
+                                </svg>
+                            </label>
+                            <button class="button" type="submit">Позвоните мне</button>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pb-100 pbm-90">
+        <div class="container">
+            <article class="article-form">
+                <h3 class="article-form__title">Рассчитать стоимость<br>импорта товаров</h3>
+                <div class="hidden-block desktop-hidden">
+                    <p>Вы можете произвести рассчет стоимости импорта товаров, для этого нажмите на кнопку ниже!</p>
+                    <button class="button" data-show>Начать рассчёт</button>
+                </div>
+                <form action="#" class="form mob-hidden" data-form data-hidden>
+                    <label class="form__item">
+                        <span class="form__top">
+                            <span class="form__text">ФИО <sup>*</sup></span>
+                            <span class="form__text form__text--error">Заполните поле!</span>
+                        </span>
+                        <input type="text" name="FIO" placeholder="Иванов Иван Иванович" required>
+                    </label>
+                    <label class="form__item">
+                        <span class="form__top">
+                            <span class="form__text">Почта <sup>*</sup></span>
+                            <span class="form__text form__text--error">Заполните поле!</span>
+                        </span>
+                        <input type="email" name="EMAIL" placeholder="mail@gmail.ru" required>
+                    </label>
+                    <label class="form__item">
+                        <span class="form__top">
+                            <span class="form__text">Телефон <sup>*</sup></span>
+                            <span class="form__text form__text--error">Заполните поле!</span>
+                        </span>
+                        <input type="tel" name="TEL" placeholder="+7 (900) 400-40-40" data-tel required>
+                    </label>
+                    <label class="form__item">
+                        <span class="form__top">
+                            <span class="form__text">Страна-экспортер</span>
+                            <span class="form__text form__text--error">Заполните поле!</span>
+                        </span>
+                        <input type="text" name="COUNTRY_EXPORT" placeholder="Бельгия" min="1">
+                    </label>
+                    <label class="form__item">
+                        <span class="form__top">
+                            <span class="form__text">Описание товара</span>
+                            <span class="form__text form__text--error">Заполните поле!</span>
+                        </span>
+                        <input type="text" name="DESCRIPTION" placeholder="Описание" min="1">
+                    </label>
+                    <label class="form__item">
+                        <span class="form__top">
+                            <span class="form__text">Сумма и валюта инвойса</span>
+                            <span class="form__text form__text--error">Заполните поле!</span>
+                        </span>
+                        <input type="number" name="PRICE" placeholder="50 000 euro" min="1">
+                    </label>
+                    <label class="form__item">
+                        <span class="form__top">
+                            <span class="form__text">Таможенный код (при наличии)</span>
+                            <span class="form__text form__text--error">Заполните поле!</span>
+                        </span>
+                        <input type="number" name="CODE" placeholder="000000000000" min="1">
+                    </label>
+                    <label class="form__item">
+                        <span class="form__top">
+                            <span class="form__text">Аутсорсинг ВЭД</span>
+                            <span class="form__text form__text--error">Заполните поле!</span>
+                        </span>
+                        <input type="text" name="AUTSORSING" placeholder="Да / Нет" min="1">
+                    </label>
+                    <label class="form__item">
+                        <span class="form__top">
+                            <span class="form__text">Вес товара/количество паллет (кг/шт)</span>
+                            <span class="form__text form__text--error">Заполните поле!</span>
+                        </span>
+                        <input type="number" name="WEIGHT" placeholder="10000 / 10" min="1">
+                    </label>
+                    <button class="button button--slim">Рассчитать</button>
+                </form>
+            </article>
+        </div>
+    </section>
+    <section class="section pb-100 pbm-90" id="services">
+        <div class="container">
+            <div class="head">
+                <h2 class="title mb-24">Услуги</h2>
+                <p class="subtitle">
+                    Наши специалисты имеют большой опыт работы по удалённому оформлению товара в таможенных<br
+                    class="mob-hidden"> центрах
+                    электронного декларирования (так называемые ЦЭД), что даёт возможность сэкономить<br
+                    class="mob-hidden"> автотрансопртные
+                    издержки и существенно сокращает сроки таможенного оформления.
+                </p>
+            </div>
+            <div class="grid grid--3">
+                <div class="grid__item">
+                    <article class="article-service">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Проведение финансовых операций со странами ЕС</h3>
+                            <p class="article-service__text article-service__text--blue">Нами отработана схема
+                                проведения платежей через 3-и страны.</p>
+                            <ul class="article-service__list">
+                                <li class="article-service__element">сохранность средств и гарантии</li>
+                                <li class="article-service__element">консультации по покупке товаров в странах ЕС</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="grid__item">
+                    <article class="article-service">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Ввоз товаров в режиме санкций и по параллельному
+                                импорту</h3>
+                            <p class="article-service__text article-service__text--blue">Имеем своих таможенных брокеров
+                                в странах ЕС , консультируем по сложным вопросам.</p>
+                            <ul class="article-service__list">
+                                <li class="article-service__element">помощь в поиске поставщиков</li>
+                                <li class="article-service__element">оперативное заключение контрактов с поставщиками
+                                </li>
+                                <li class="article-service__element">консультации по вопросам ввоза товаров</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="grid__item">
+                    <article class="article-service">
+                        <div class="article-service__info">
+                            <h3 class="article-service__title">Помощь с таможенным оформлением</h3>
+                            <p class="article-service__text article-service__text--blue">
+                                У нас 20 летний опыт работы в таможенном оформлении и очистки всех видов и категорий
+                                товаров. Решаем сложные вопросы.
+                            </p>
+                            <ul class="article-service__list">
+                                <li class="article-service__element">готовые декларации</li>
+                                <li class="article-service__element">страхование</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="grid__item grid__item--s-3">
+                    <article class="article-service article-service--dark"></article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pb-100 pbm-90" id="features">
+        <div class="container">
+            <div class="wrapper">
+                <div class="head head--left">
+                    <h2 class="title mb-24">Наши преимущества</h2>
+                    <p class="subtitle mb-30">Наша цель - перспективное сотрудничество на постоянной<br>основе. Мы
+                        стараемся
+                        предоставить качественные<br> оперативные услуги по внешнеторговым поставкам.</p>
+                    <p class="subtitle">Приобретаем груз, действуя от имени легальной компании,<br>зарегестрированной в
+                        не присоединившихся к санкциям странах.<br>Наша компания выберет для вас надёжного партнёра,
+                        опираясь
+                        на<br>собственный опыт перевозок и местное законодательство, а<br>также нюансы законодательных
+                        актов
+                        страны-экспортера.</p>
+                </div>
+                <div class="grid grid--features">
+                    <div class="grid__item">
+                        <article class="article-feature">
+                            <picture class="article-feature__picture"></picture>
+                            <h3 class="article-feature__title">Контракты</h3>
+                            <p class="article-feature__text">Оперативное заключение контрактов с вашими поставщиками</p>
+                        </article>
+                    </div>
+                    <div class="grid__item">
+                        <article class="article-feature">
+                            <picture class="article-feature__picture"></picture>
+                            <h3 class="article-feature__title">Безопасность</h3>
+                            <p class="article-feature__text">Перевод денежных средств с сохранностью</p>
+                        </article>
+                    </div>
+                    <div class="grid__item">
+                        <article class="article-feature">
+                            <picture class="article-feature__picture"></picture>
+                            <h3 class="article-feature__title">Доставка</h3>
+                            <p class="article-feature__text">Помощь в доставке санкционных товаров и таможенным
+                                оформлением</p>
+                        </article>
+                    </div>
+                    <div class="grid__item">
+                        <article class="article-feature">
+                            <picture class="article-feature__picture"></picture>
+                            <h3 class="article-feature__title">Вознаграждение</h3>
+                            <p class="article-feature__text">Оптимальное агентское вознаграждение за услуги</p>
+                        </article>
+                    </div>
+                    <div class="grid__item">
+                        <article class="article-feature">
+                            <picture class="article-feature__picture"></picture>
+                            <h3 class="article-feature__title">Личный менеджер и информирование 24/7</h3>
+                            <p class="article-feature__text">Наш менеджер находится с вами на связи 24/7</p>
+                        </article>
+                    </div>
+                    <div class="grid__item">
+                        <article class="article-feature">
+                            <picture class="article-feature__picture"></picture>
+                            <h3 class="article-feature__title">Перевозки</h3>
+                            <p class="article-feature__text">Организация контейнерных перевозок из портов Германии в
+                                порты РФ</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pb-150">
+        <div class="container">
+            <div class="features mb-60">
+                <div class="features__item">
+                    <div class="features__head">
+                        <h3 class="features__title">Работаем с юридическими лицами</h3>
+                    </div>
+                    <div class="features__wrapper">
+                        <div class="features__element">
+                            <picture class="features__picture">
+                                <img src="./assets/images/photo-1.png" alt="">
+                            </picture>
+                            <p class="features__text">
+                                Отправляем любые товары из санкционного списка: обувь, одежду, мебель, строительные
+                                материалы, электронику, продукты, опасные грузы и многое другое
+                            </p>
+                        </div>
+                        <div class="features__element">
+                            <picture class="features__picture">
+                                <img src="./assets/images/photo-2.png" alt="">
+                            </picture>
+                            <p class="features__text">Оформляем все документы для таможни без посредников, предоставляем
+                                необходимые официальные документы</p>
+                        </div>
+                        <div class="features__element">
+                            <picture class="features__picture">
+                                <img src="./assets/images/photo-3.png" alt="">
+                            </picture>
+                            <p class="features__text">Поможем с доставкой в любой регион России, от Санкт-Петербурга до
+                                Дагестана, от мегаполиса до небольшого поселка</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="features__item">
+                    <div class="features__head">
+                        <h3 class="features__title">Полностью контролируем процесс<br class="mob-hidden"> <span>с момента заключения
+                            договоренности</span></h3>
+                        <p class="features__text">Мы решаем Ваши вопросы с таможней, пока Вы делаете свой бизнес</p>
+                    </div>
+                    <div class="features__wrapper">
+                        <div class="features__element">
+                            <picture class="features__picture">
+                                <img src="./assets/images/photo-4.png" alt="">
+                            </picture>
+                            <p class="features__text">Заключаем с Вами договор и обсуждаем все условия и тонкости</p>
+                        </div>
+                        <div class="features__element">
+                            <picture class="features__picture">
+                                <img src="./assets/images/photo-5.png" alt="">
+                            </picture>
+                            <p class="features__text">Приезжаем к Вашему поставщику , оформляем
+                                и забираем у него груз</p>
+                        </div>
+                        <div class="features__element">
+                            <picture class="features__picture">
+                                <img src="./assets/images/photo-6.png" alt="">
+                            </picture>
+                            <p class="features__text">Делаем полное таможенное оформление, декларируем и решаем все
+                                вопросы</p>
+                        </div>
+                        <div class="features__element">
+                            <picture class="features__picture">
+                                <img src="./assets/images/photo-7.png" alt="">
+                            </picture>
+                            <p class="features__text">Помогаем привезти груз к Вам на склад в России</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback">
+                <div class="head mb-0">
+                    <h2 class="title mb-24">Свяжитесь с нами</h2>
+                    <p class="subtitle mb-30">Заполните поле, наш менеджер свяжется с Вами в ближайшее время.</p>
+                    <form action="#" class="form-feedback" data-form>
+                        <label class="form-feedback__input">
+                            <input type="tel" name="TEL" placeholder="Телефон" required>
+                            <svg class="form-feedback__icon">
+                                <use xlink:href="./assets/sprite/sprite.svg#icon-phone"></use>
+                            </svg>
+                        </label>
+                        <button class="button" type="submit">Позвоните мне</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pb-100">
+        <div class="container">
+            <div class="head mb-0">
+                <h2 class="title mb-24">Страны</h2>
+                <p class="subtitle mb-30">Покупка товаров из санкционного списка<br>осуществляется из нижеперечисленных
+                    стран.</p>
+            </div>
+            <div class="countries">
+                <div class="countries__list">
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-1.png" alt="">
+                        </picture>
+                        <p class="countries__text">Австрия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-1.png" alt="">
+                        </picture>
+                        <p class="countries__text">Австрия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-1.png" alt="">
+                        </picture>
+                        <p class="countries__text">Австрия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-4.png" alt="">
+                        </picture>
+                        <p class="countries__text">Великобритания</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-4.png" alt="">
+                        </picture>
+                        <p class="countries__text">Великобритания</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-4.png" alt="">
+                        </picture>
+                        <p class="countries__text">Великобритания</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-3.png" alt="">
+                        </picture>
+                        <p class="countries__text">Бельгия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-3.png" alt="">
+                        </picture>
+                        <p class="countries__text">Бельгия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-3.png" alt="">
+                        </picture>
+                        <p class="countries__text">Бельгия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-2.png" alt="">
+                        </picture>
+                        <p class="countries__text">Болгария</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-2.png" alt="">
+                        </picture>
+                        <p class="countries__text">Болгария</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-2.png" alt="">
+                        </picture>
+                        <p class="countries__text">Болгария</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-1.png" alt="">
+                        </picture>
+                        <p class="countries__text">Австрия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-1.png" alt="">
+                        </picture>
+                        <p class="countries__text">Австрия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-1.png" alt="">
+                        </picture>
+                        <p class="countries__text">Австрия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-4.png" alt="">
+                        </picture>
+                        <p class="countries__text">Великобритания</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-4.png" alt="">
+                        </picture>
+                        <p class="countries__text">Великобритания</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-4.png" alt="">
+                        </picture>
+                        <p class="countries__text">Великобритания</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-3.png" alt="">
+                        </picture>
+                        <p class="countries__text">Бельгия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-3.png" alt="">
+                        </picture>
+                        <p class="countries__text">Бельгия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-3.png" alt="">
+                        </picture>
+                        <p class="countries__text">Бельгия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-2.png" alt="">
+                        </picture>
+                        <p class="countries__text">Болгария</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-2.png" alt="">
+                        </picture>
+                        <p class="countries__text">Болгария</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-2.png" alt="">
+                        </picture>
+                        <p class="countries__text">Болгария</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-1.png" alt="">
+                        </picture>
+                        <p class="countries__text">Австрия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-1.png" alt="">
+                        </picture>
+                        <p class="countries__text">Австрия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-1.png" alt="">
+                        </picture>
+                        <p class="countries__text">Австрия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-4.png" alt="">
+                        </picture>
+                        <p class="countries__text">Великобритания</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-4.png" alt="">
+                        </picture>
+                        <p class="countries__text">Великобритания</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-4.png" alt="">
+                        </picture>
+                        <p class="countries__text">Великобритания</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-3.png" alt="">
+                        </picture>
+                        <p class="countries__text">Бельгия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-3.png" alt="">
+                        </picture>
+                        <p class="countries__text">Бельгия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-3.png" alt="">
+                        </picture>
+                        <p class="countries__text">Бельгия</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-2.png" alt="">
+                        </picture>
+                        <p class="countries__text">Болгария</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-2.png" alt="">
+                        </picture>
+                        <p class="countries__text">Болгария</p>
+                    </div>
+                    <div class="countries__item">
+                        <picture class="countries__flag">
+                            <img src="./assets/images/flag-2.png" alt="">
+                        </picture>
+                        <p class="countries__text">Болгария</p>
+                    </div>
+                </div>
+                <picture class="countries__picture">
+                    <img src="./assets/images/planet-2.png" alt="">
+                </picture>
+            </div>
+        </div>
+    </section>
 </main>
-<%= htmlWebpackPlugin.options.sectionFooter %>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__info">
+                <a href="#" class="footer__logo">
+                    <img src="./assets/images/logo.svg" alt="">
+                </a>
+                <p class="footer__text footer__text--small">Общество с ограниченной<br>ответственностью «Строй-Инвест»
+                </p>
+            </div>
+            <div class="footer__detail">
+                <div class="footer__element">
+                    <h3 class="footer__title">Адрес:</h3>
+                    <p class="footer__text">
+                        121351, г.Москва,<br>
+                        ул. Ярцевская, д.22, стр.1
+                    </p>
+                </div>
+                <div class="footer__element">
+                    <h3 class="footer__title">E-mail:</h3>
+                    <a href="mailto:44222@rambler.ru" class="footer__text">
+                        44222@rambler.ru
+                    </a>
+                </div>
+            </div>
+            <div class="footer__subscribe">
+                <h2 class="footer__title footer__title--big">Подпишитесь на наш телеграмм</h2>
+                <p class="footer__text">Чтобы быть в курсе новостей и акций.</p>
+                <button class="button">
+                    <svg class="button__icon">
+                        <use xlink:href="./assets/sprite/sprite.svg#icon-telegram"></use>
+                    </svg>
+                    <span>Telegram</span>
+                </button>
+            </div>
+        </div>
+        <a href="#" class="diez">
+            <span>Разработано</span>
+            <svg class="diez__icon">
+                <use xlink:href="./assets/sprite/sprite.svg#icon-diez"></use>
+            </svg>
+        </a>
+    </div>
+</footer>
+<div class="alert">
+    <div class="alert__picture">
+        <svg class="alert__accept">
+            <use xlink:href="./assets/sprite/sprite.svg#icon-check"></use>
+        </svg>
+    </div>
+    <h2 class="alert__title">Спасибо за вашу заявку!</h2>
+    <p class="alert__text">Мы свяжемся с вами в ближайшее время.</p>
+    <button class="alert__close">
+        <svg class="alert__icon">
+            <use xlink:href="./assets/sprite/sprite.svg#icon-close"></use>
+        </svg>
+    </button>
+</div>
 
-<%= htmlWebpackPlugin.options.temp %>
+<div class="modal" data-modal>
+    <div class="modal__content">
+        <h2 class="modal__title">Заполните форму обратной связи</h2>
+        <form action="#" class="form form--column" data-form>
+            <label class="form__item">
+                <span class="form__top">
+                    <span class="form__text">ФИО <sup>*</sup></span>
+                    <span class="form__text form__text--error">Заполните поле!</span>
+                </span>
+                <input type="text" name="FIO" placeholder="Иванов Иван Иванович" required>
+            </label>
+            <label class="form__item">
+                <span class="form__top">
+                    <span class="form__text">Телефон <sup>*</sup></span>
+                    <span class="form__text form__text--error">Заполните поле!</span>
+                </span>
+                <input type="tel" name="TEL" placeholder="+7 (900) 400-40-40" required>
+            </label>
+            <label class="form__item">
+                <span class="form__top">
+                    <span class="form__text">Ваш вопрос</span>
+                    <span class="form__text form__text--error">Заполните поле!</span>
+                </span>
+                <textarea name="QUESTION" id="" cols="30" rows="10" placeholder="Вопрос"></textarea>
+            </label>
+            <button class="button button--slim">Отправить</button>
+        </form>
+        <div class="modal__close">
+            <svg class="modal__icon">
+                <use xlink:href="./assets/sprite/sprite.svg#icon-close"></use>
+            </svg>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

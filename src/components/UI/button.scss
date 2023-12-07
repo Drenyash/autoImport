@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: $blue;
+  border-radius: 12px;
+  color: $light;
+  text-align: center;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+  transition: .2s linear;
+
+  &--slim {
+    padding: 10px 16px;
+  }
+
+  &:hover {
+    background-color: $blue-dark;
+  }
+
+  &__icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+  }
+}

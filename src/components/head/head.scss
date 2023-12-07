@@ -1,0 +1,19 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+
+  @include r(1200) {
+    margin-bottom: 30px;
+  }
+
+  &--left {
+    align-items: flex-start;
+
+    .subtitle,
+    .title {
+      text-align: left;
+    }
+  }
+}

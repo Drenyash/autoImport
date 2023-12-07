@@ -1,0 +1,38 @@
+.countries {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px 100px;
+    @include r(1200) {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__picture {
+    position: relative;
+    @include r(1200) {
+      display: none;
+    }
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      width: 600px;
+      height: 600px;
+      background-color: rgba(#964B00, 0.2);
+      transform: translate(-50%, -50%);
+      filter: blur(100px);
+      z-index: -1;
+    }
+  }
+}

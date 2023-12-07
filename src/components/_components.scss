@@ -2,6 +2,33 @@
 @import "columns/columns";
 @import "container/container";
 @import "main/main";
+@import "header/header";
+@import "nav/nav";
+@import "head/head";
+@import "title/title";
+@import "subtitle/subtitle";
+@import "logo/logo";
+@import "grid/grid";
+@import "wrapper/wrapper";
+@import "features/features";
+@import "feedback/feedback";
+@import "countries/countries";
+@import "footer/footer";
+@import "diez/diez";
+@import "alert/alert";
+@import "modal/modal";
+@import "hidden-block/hidden-block";
+
+// Articles
+@import "article/article-picture";
+@import "article/article-product";
+@import "article/article-service";
+@import "article/article-form";
+@import "article/article-feature";
+
+//Forms
+@import "form/form";
+@import "form/form-feedback";
 
 // UI
 @import "UI/ui";

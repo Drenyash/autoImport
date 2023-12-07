@@ -6,9 +6,10 @@
 // Base
 @import "base/fonts";
 @import "base/general";
-@import "base/margins";
-@import "base/paddings";
 @import "base/temp";
 
 // Components
 @import "../components/components";
+
+@import "base/margins";
+@import "base/paddings";

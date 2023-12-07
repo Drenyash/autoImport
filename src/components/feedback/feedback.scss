@@ -1,0 +1,9 @@
+.feedback {
+  padding: 60px 0;
+  background-color: $gray;
+  border-radius: 24px;
+
+  @include r(1200) {
+    padding: 44px 23px 34px;
+  }
+}

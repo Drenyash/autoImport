@@ -1,0 +1,71 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__element {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include r(1200) {
+      gap: 30px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 85px;
+    @include r(1200) {
+      display: flex;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    color: $green;
+    span {
+      font-weight: 400;
+      color: $dark;
+    }
+  }
+  &__picture {
+    display: flex;
+    width: 320px;
+    height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    @include r(1200) {
+      height: 90px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $primary;
+  }
+}

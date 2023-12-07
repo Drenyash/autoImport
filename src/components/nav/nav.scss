@@ -1,0 +1,20 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @include r(1200) {
+    display: none;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
