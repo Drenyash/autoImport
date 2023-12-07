@@ -13,7 +13,7 @@ module.exports = [
         template: "./src/index.html",
         filename: "index.html",
         inject: "body",
-        title: "Корзина Пари",
+        title: "Авто импорт",
         head,
         sectionHeader,
         sectionFooter,
