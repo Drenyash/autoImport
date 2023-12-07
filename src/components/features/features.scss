@@ -28,8 +28,10 @@
     gap: 85px;
     @include r(1200) {
       display: flex;
+      padding-bottom: 20px;
       max-width: 100%;
       overflow-x: auto;
+      gap: 10px;
     }
   }
   &__title {
@@ -51,6 +53,7 @@
 
     @include r(1200) {
       height: 90px;
+      width: 280px;
     }
 
     img {
@@ -58,7 +61,7 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      object-position: center;
+      object-position: top;
     }
   }
 

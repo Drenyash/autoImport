@@ -39,10 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
             items.forEach(el => {
                 const input = el.querySelector('input')
                 const error = el.querySelector('.form__text.form__text--error')
-                if (input.value === '') {
-                    input.classList.add('invalid')
-                    error.classList.add('active')
-                }
                 if (!input.validity.valid) {
                     input.classList.add('invalid')
                     error.classList.add('active')

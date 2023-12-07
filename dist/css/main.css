@@ -1750,8 +1750,10 @@ ul, ol, li {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    padding-bottom: 20px;
     max-width: 100%;
     overflow-x: auto;
+    gap: 10px;
   }
 }
 .features__title {
@@ -1777,6 +1779,7 @@ ul, ol, li {
 @media only screen and (max-width: 1200px) {
   .features__picture {
     height: 90px;
+    width: 280px;
   }
 }
 .features__picture img {
@@ -1785,8 +1788,8 @@ ul, ol, li {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top;
+     object-position: top;
 }
 .features__text {
   font-size: 14px;
